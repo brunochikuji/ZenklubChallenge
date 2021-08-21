@@ -1,27 +1,44 @@
 # ZenklubChallenge
+Project in production at the link https://zenklub-challenge.web.app/ 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+Mobile
 
-## Development server
+<img src="./src/assets/ProjectPrints/mobile.png" alt="Mobile" width="200">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Tablet
+![](src/assets/ProjectPrints/tablet.png)
 
-## Code scaffolding
+Desktop
+![](src/assets/ProjectPrints/desktop.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Project details
+The project was created to developing the challenge proposed by Zenklub.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Technologies used
+
+- Angular version 12 to frontend
+- Firebase hosting to store project in production
+- Flask with Python 3.8 to return persons and available dates
+- Google App engine to store Flask API
+
+## Run project locally
+
+### First install dependencies
+Run command in project root directory
+```sh
+npm install
+```
+
+### Start local server
+Run command in project root directory
+```sh
+ng serve
+```
+After navigate to `http://localhost:4200/`
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![](src/assets/ProjectPrints/tests.png )
