@@ -1,0 +1,9 @@
+<section class="container">
+  <div class="card" *ngIf="person">
+    <app-person [person]="person"></app-person>
+    <app-calendar [availabilities]="person.availabilities"></app-calendar>
+  </div>
+  <div class="card loading" *ngIf="!person">
+    <img src="assets/images/loading.gif" alt="Loading">
+  </div>
+</section>

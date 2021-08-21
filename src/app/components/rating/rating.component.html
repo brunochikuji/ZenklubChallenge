@@ -1,0 +1,10 @@
+<ul class="stars">
+  <li class="star-item" *ngFor="let star of stars">
+    <ng-container [ngSwitch]="true">
+      <i class="fa fa-star" *ngSwitchCase="rating.value >= star"></i>
+      <i class="fa fa-star-half-alt" *ngSwitchCase="(star -1) < rating.value && rating.value < star"></i>
+      <i class="far fa-star" *ngSwitchDefault></i>
+    </ng-container>
+  </li>
+</ul>
+<span class="review">({{ rating.total }} {{ rating.total > 1 ? 'reviews' : 'review' }})</span>

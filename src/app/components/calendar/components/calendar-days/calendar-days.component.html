@@ -1,0 +1,19 @@
+<div class="calendar-days">
+  <i class="fas fa-chevron-left cursor-pointer" [class.disabled]="!index"
+     (click)="changeIndex(-1)">
+  </i>
+
+  <ng-container *ngFor="let availability of availabilities | slice:index * itemsVisible : (index * itemsVisible) + itemsVisible">
+    <div class="day cursor-pointer"
+         [class.selected]="availability == availabilitySelected"
+         (click)="onSelectDate(availability)">
+      <div class="weekday">{{ availability.date | date: 'EEE' }}</div>
+      <div class="text-uppercase date">{{ availability.date | date:'MMM dd' }}</div>
+    </div>
+  </ng-container>
+
+  <i class="fas fa-chevron-right cursor-pointer" [class.disabled]="itemsVisible * (index + 1) >= availabilities.length"
+     (click)="changeIndex(1)">
+  </i>
+
+</div>

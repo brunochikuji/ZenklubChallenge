@@ -1,0 +1,23 @@
+<div class="info">
+  <div class="profile-image">
+    <img [src]="person.imageUrl || '/assets/images/person.png'" alt="Profile image" (error)="onImgError($event)">
+  </div>
+  <div class="details">
+    <h1>{{person.fullName}}</h1>
+    <div>
+      <span class="highlight text-uppercase cursor-pointer">{{person.specialty}}</span> | {{person.location}}
+    </div>
+    <app-rating [rating]="person.rating"></app-rating>
+    <div>
+        <ng-container *ngIf="person.price.oneHour">
+          <span class="price">{{ person.price.oneHour | currency: 'BRL': 'symbol' : '1.0-2'}}</span> / 50 minutes
+        </ng-container>
+        <ng-container *ngIf="!person.price.oneHour">
+          <span class="price">{{ person.price.halfHour | currency: 'BRL': 'symbol' : '1.0-2'}}</span> / 25 minutes
+        </ng-container>
+    </div>
+  </div>
+</div>
+<div class="col-12 description">
+  {{person.description}}
+</div>

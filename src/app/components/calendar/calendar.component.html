@@ -1,0 +1,22 @@
+<div class="calendar-container">
+  <div class="calendar-header">
+    <div class="title">Schedule your session!</div>
+    <div class="subtitle">Timezone: São Paulo (-3)</div>
+  </div>
+  <app-calendar-days
+    [availabilities]="availabilities"
+    [availabilitySelected]="availabilitySelected"
+    (dateSelected)="onAvailabilitySelected($event)">
+  </app-calendar-days>
+  <div class="times-container">
+    <div class="times">
+      <div class="time cursor-pointer" *ngFor="let time of availabilitySelected.times"
+           [class.disabled]="!time.available"
+           [class.selected]="timeSelected === time.time"
+           (click)="timeSelected = time.time">
+        {{time.time}}
+      </div>
+    </div>
+  </div>
+
+</div>

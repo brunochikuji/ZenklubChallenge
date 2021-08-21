@@ -1,0 +1,42 @@
+@import "src/theme/variables";
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 14px 0;
+}
+.highlight {
+  color: var(--secondary);
+  font-weight: bold;
+}
+.info {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.profile-image {
+  padding: 0 16px 16px;
+  img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+.price {
+  font-size: 16px;
+  font-weight: 500;
+}
+.description {
+  margin: 16px;
+  line-height: 1.5;
+}
+@media screen and (min-width: map-get($breakpoints, Large)) {
+  .info {
+    text-align: unset;
+    display: flex;
+    .details {
+      width: 100%;
+    }
+  }
+}
+
